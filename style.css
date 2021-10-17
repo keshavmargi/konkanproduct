@@ -1,0 +1,500 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+.row {
+    --bs-gutter-x: 0rem;
+    --bs-gutter-y: 0;
+}
+
+#logo > img{
+    align-content: center;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+}
+
+#intro > div >p{
+    text-align: justify;
+    padding: 0.5rem;
+}
+
+#heading{
+   height: auto;
+   background-color: rgb(20, 112, 84);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#heading >h1{
+    text-align: center;
+    color: thistle;
+}
+
+#nav{
+   width: auto;
+   height: auto;
+   background-color: greenyellow;
+   text-align: center;
+}
+
+#list{
+    height: 100%;
+}
+
+#list > ul > li{
+    text-decoration: none;
+    display: inline;
+    list-style-type: none;
+    margin-left: 5px;
+}
+
+#list > ul{
+    float: left;
+    padding: 0%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#nav > div > button{
+    float: right;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 5px;
+}
+
+#regForm {
+    background-color: #ffffff;
+    margin: 5px auto;
+    font-family: Raleway;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+  }
+  
+#regForm > h1 {
+    text-align: center;  
+  }
+  
+#regForm > div > p > input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+  }
+  
+  /* Mark input boxes that gets an error on validation: */
+#regForm > div > p > input.invalid {
+    background-color: #ffdddd;
+  }
+   */
+  /* Hide all steps by default: */
+.tab {
+    display: none;
+  }
+  
+#regForm > div > div > button {
+    background-color: #04AA6D;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+  }
+  
+#regForm > div > div >  button:hover {
+    opacity: 0.8;
+}
+  
+#prevBtn {
+    background-color: #bbbbbb;
+}
+  
+  /* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+  
+.step.active {
+    opacity: 1;
+}
+  
+  /* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: #04AA6D;
+}
+
+#thatlist > h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#thatlist ~ div > button > li{
+    text-align: left;
+    padding-left: 2rem;
+}
+
+a {
+    color: #fd9d0d;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #fd9d0d;
+}
+
+#content{
+    height: 100%;
+    overflow: auto;
+}
+
+#audioplay{
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+    overflow: auto;
+    position: relative;
+}
+
+#audioplay > div > h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    font-size: 100%;
+    margin: 0%;
+    padding: 10px;
+}
+
+#audioplay > div >p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+#videoplay{
+    height: 250px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+#videoplay > div >h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#evt{
+    height: auto;
+    border: 1px solid black;
+}
+
+#evt > div >div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tutor{
+    height: auto;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+#tutor > div >h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tutor > div > a{
+    text-align: left;
+    padding-left: 0.5rem;
+    display: block;
+}
+
+#instru{
+    height: 250px;
+    border: 1px solid black;
+    position: relative;
+    width: 100%;
+}
+
+#instru > div >h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+#instru > div{
+    margin: 0%;
+    border: 1px solid #ccc;
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    align-items: center;
+    position: relative;
+}
+
+#instru > div > img{
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+}
+
+#locate{
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+    overflow: auto;
+    position: relative;
+}
+
+#locate > div{
+    margin: 0%;
+    border: 1px solid #ccc;
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    align-items: center;
+    position: relative;
+}
+
+#locate > div > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+#rate{
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+    overflow: auto;
+    position: relative;
+    border-bottom: none;
+    
+}
+
+#rate > div >h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rate > div{
+    margin: 0%;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    align-items: center;
+    position: relative;
+}
+
+#ad{
+    height: auto;
+    border: 1px solid black;
+}
+
+#ad > div >h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer.row > footer{
+    width: 100%;
+    height: 25px;
+    background-color: greenyellow;
+    text-align: right;
+ }
+.carousel-indicators [data-bs-target]{
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #020202;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+    }
+
+.carousel {
+    position: relative;
+    height: 400px;
+    }
+
+.carousel-inner{position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    }
+    
+.carousel-item{position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+    }
+
+    .fa {
+        font-size: 25px;
+      }
+      
+      .checked {
+        color: orange;
+      }
+      
+      /* Three column layout */
+      .side {
+        float: left;
+        width: 15%;
+        margin-top:10px;
+      }
+      
+      .middle {
+        margin-top:10px;
+        float: left;
+        width: 70%;
+      }
+      
+      /* Place text to the right */
+      .right {
+        text-align: right;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* The bar container */
+      .bar-container {
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+        color: white;
+      }
+      
+      /* Individual bars */
+      .bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+      .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+      .bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+      .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+      .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+      
+      /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+      @media (max-width: 400px) {
+        .side {
+          width: 15%;
+        }
+        .right {
+          width: 15%;
+        }
+        .middle{
+            width: 70%;
+        }
+      }
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(240, 87, 87);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+      
+input[type=submit] {
+    background-color: #8b2b6f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    }
+      
+input[type=submit]:hover {
+    background-color: #45a049;
+    }
+#form {
+    padding: 20px;
+    /* The image used */
+    background-image: url("kokansea.jpg");
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    }
+
+#form > form{
+    position: relative;
+    background-color: gray;
+    width: 60%;
+    height: 100%;
+    margin-right: 10%;
+    border-radius: 5px;
+}
+
+#form > form > h3{display: block;
+    /* font-size: 1.17em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+#footer.row > footer{
+    width: 100%;
+    height: 25px;
+    background-color: greenyellow;
+    text-align: center;
+ }
+

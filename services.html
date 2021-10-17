@@ -1,0 +1,341 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .column {
+        float: left;
+        width: 100%;
+        display: none; /* Hide all elements by default */
+      }
+
+      
+      /* Content */
+      .content {
+        background-color: rgb(218, 219, 141);
+        padding: 10px;
+        color: rgb(12, 31, 31);
+        
+      }
+      
+      #content{
+        overflow: auto;
+        max-height: 1000px;
+      }
+      /* The "show" class is added to the filtered elements */
+      .show {
+        display: block;
+      }
+      
+      /* Style the buttons */
+      #myBtnContainer > .btn {
+        border: none;
+        outline: none;
+        /* padding: 12px 16px; */
+        background-color: rgb(104, 119, 49);
+        cursor: pointer;
+        border-radius: 0.25rem;
+        margin: 2%;
+      }
+      
+     #myBtnContainer > .btn:hover {
+        background-color: #ddd;
+      }
+      
+    #myBtnContainer > .btn.active {
+        background-color: #666;
+        color: white;
+      }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="logo" class="col-sm-3"><img src="ecommercemouse.jpg" alt="Our Logo" width="100%" height="100px"></div>
+            <div id="heading" class="col-sm-9">
+                    <h1>
+                        Welcome To Konkan Products
+                    </h1>
+            </div>
+        </div>
+
+        <div id="nav" class="row">
+            <div id="list" class="col">
+                <ul>
+                    <li><button type="button" class="btn btn-secondary"><a href="file:///D:/Web%20Works/Ecommerce%20Website/index.html#">Home</a></button></li>
+                    <li><button type="button" class="btn btn-secondary"><a href="file:///D:/Web%20Works/Ecommerce%20Website/services.html">Services</a></button></li>
+                    <li><button type="button" class="btn btn-secondary"><a href="file:///D:/Web%20Works/Ecommerce%20Website/productslist.html">Products List</a></button></li>
+                    <li><button type="button" class="btn btn-secondary"><a href="file:///D:/Web%20Works/Ecommerce%20Website/contact.html">Contact us</a></button></li>
+                    <li><button type="button" class="btn btn-secondary"><a href="file:///D:/Web%20Works/Ecommerce%20Website/about.html">About us</a></button></li>
+                </ul>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#myModal">Log in</button>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#signup">Sign Up</button>
+            </div>
+        </div>
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+          
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Login <Form></Form></h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container mt-3">
+                        <form action="/action_page.php" class="was-validated">
+                          <div class="mb-3 mt-3">
+                            <label for="uname" class="form-label">Username:</label>
+                            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="pwd" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                          </div>
+                          <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="myCheck"  name="remember" required>
+                            <label class="form-check-label" for="myCheck">I agree</label>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Check this checkbox to continue.</div>
+                          </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                      </div>
+                </div>
+          
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+          <!-- The Modal -->
+          <div class="modal" id="signup">
+            <div class="modal-dialog">
+              <div class="modal-content">
+          
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Sign Up<Form></Form></h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container mt-3">
+                      <form id="regForm" action="/action_page.php">
+                        <h1>Register:</h1>
+                        <!-- One "tab" for each step in the form: -->
+                        <div class="tab" style="display: block;">Name:
+                          <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
+                          <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
+                        </div>
+                        <div class="tab" style="display: none;">Contact Info:
+                          <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+                          <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+                        </div>
+                        <div class="tab" style="display: none;">Birthday:
+                          <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+                          <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
+                          <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+                        </div>
+                        <div class="tab" style="display: none;">Login Info:
+                          <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+                          <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+                        </div>
+                        <div style="overflow:auto;">
+                          <div style="float:right;">
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)" style="display: none;">Previous</button>
+                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                          </div>
+                        </div>
+                        <!-- Circles which indicates the steps of the form: -->
+                        <div style="text-align:center;margin-top:40px;">
+                          <span class="step"></span>
+                          <span class="step"></span>
+                          <span class="step"></span>
+                          <span class="step"></span>
+                        </div>
+                      </form>
+                      </div>
+                </div>
+          
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+  
+        <div class="row">
+            <div class="col-sm-3 bg-dark text-white">
+                  <div class="row">
+                    <div  id="myBtnContainer" style="padding: 5px; text-align: center;">
+                      <button class="btn active" onclick="filterSelection('all')" style="width: 80%;">Our All Services</button>
+                      <button class="btn" onclick="filterSelection('nature')" style="width: 80%;">Sales</button>
+                      <button class="btn" onclick="filterSelection('cars')" style="width: 80%;">Purchase</button>
+                      <button class="btn" onclick="filterSelection('people')" style="width: 80%;">Customer Support</button>
+                      <button class="btn" onclick="filterSelection('test')" style="width: 80%;">Product Delivery</button>
+                    </div>
+                  </div>
+                
+                <div id="ad" class="row">
+                    <div>
+                      <h4>Advertising</h4>
+                      <div class="toast show">
+                          <div class="toast-header">
+                            <strong class="me-auto">Book Your Online Class</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                          </div>
+                          <div class="toast-body" style="color: rgb(22, 13, 1);">
+                            <h2>Good Acadamy</h2>
+                            <p>Pass with good percentage</p>
+                            <p>Hurry Up</p>
+                            <p>Contact us : 1234567890</p>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 bg-secondary">
+                        <div id="content" class="row"> 
+                                      <div class="column nature">
+                                        <div class="content">
+                                          <h4>Sales Service</h4>
+                                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fuga magni similique nesciunt ab minima, suscipit esse consectetur 
+                                            rem doloremque ea laborum odit, a delectus quisquam! Error enim pariatur, veritatis accusantium, corporis
+                                             maiores blanditiis non officiis illo nemo maxime tempore natus tempora architecto, temporibus ab in ipsum
+                                             xercitationem dolorem numquam officia esse consequuntur molestiae fuga! Laudantium hic est dolor obcaecati
+                                              autem in nobis commodi quidem, quam ducimus debitis! Quod debitis expedita, minima, cumque dolor modi
+                                               exercitationem officia tenetur eaque aspernatur consectetur, qui molestias cum ipsa aperiam. Enim,
+                                                porro corporis officia molestiae quia et tenetur laudantium sequi, eius iste itaque necessitatibus.
+                                          </p>
+                                        </div>
+                                      </div>
+    
+                                      <div class="column cars">
+                                        <div class="content">
+                                          <h4>Purchase Service</h4>
+                                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nulla voluptatibus quaerat
+                                            nesciunt perspiciatis nam, a error itaque qui eius optio animi illo sed atque! Nam sint, doloribus
+                                              temporibus debitis deleniti atque odio fugit voluptates? Voluptatum sit praesentium blanditiis
+                                              molestiae iusto enim, minima fugiat saepe. Quas ullam quidem quae perspiciatis?
+                                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quo animi ducimus suscipit saepe, 
+                                              sapiente, ipsum iure assumenda cum eos nemo omnis? Doloremque id eius mollitia reprehenderit minima 
+                                              dolorem placeat laborum cumque tenetur dicta! Officiis doloremque, error id iusto optio temporibus 
+                                              cumque quis, ipsa, totam recusandae excepturi pariatur distinctio nesciunt.
+                                          </p>
+                                        </div>
+                                      </div>
+
+                                      <div class="column people">
+                                          <div class="content">
+                                            <h4>Customer Support</h4>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus expedita quos quisquam nulla rerum 
+                                              numquam laborum, cum debitis distinctio, neque non hic! Repellendus omnis, blanditiis vel consequuntur, 
+                                              perferendis tenetur dolor delectus deleniti rem neque sunt atque aperiam maxime asperiores recusandae.
+                                               Fugit pariatur nisi illo iusto, totam similique perspiciatis odio, recusandae, provident tempora 
+                                               voluptate. Quam doloremque inventore voluptatibus quia ea similique cumque vero nobis dignissimos 
+                                               eos est amet, unde ipsa natus temporibus earum facere, in repudiandae deleniti praesentium accusamus 
+                                               libero veritatis labore recusandae. Tempore molestiae beatae distinctio quasi, perspiciatis officia 
+                                               architecto animi aliquam inventore rem repellat ea expedita maiores nihil exercitationem debitis quia 
+                                               qui nisi vitae quos quas ipsa autem dolore. Accusamus vitae quae incidunt in! At, cupiditate dolor cumque 
+                                               quo praesentium error incidunt ab. Eum exercitationem adipisci nulla corrupti numquam odit, illum alias 
+                                               tenetur reiciendis! Ea sunt, sapiente voluptatum obcaecati exercitationem accusantium in sequi tempora, 
+                                               aspernatur quis culpa quia quisquam ullam dolore soluta suscipit eligendi dolorum magni fugiat similique 
+                                               odit esse. Fuga aperiam quisquam aliquam nobis dolore error veniam est, consectetur quaerat accusantium 
+                                               libero, ipsa facere enim exercitationem cupiditate laborum. Rem quis blanditiis hic, rerum earum dolorem 
+                                               accusamus vel officiis explicabo, et ea, quam unde non. Illo cupiditate rem nobis. Lorem ipsum dolor sit 
+                                               amet consectetur adipisicing elit. Rem assumenda fugit ex eum harum aut vero? 
+                                              Incidunt perspiciatis accusamus earum porro voluptates, harum vitae, iusto nisi ab dolor repudiandae
+                                              dolores totam ex aspernatur sunt suscipit animi. Mollitia consequuntur et quam, quo non placeat 
+                                              soluta corporis, sed dignissimos vero deleniti architecto!
+                                            </p>
+                                          </div>
+                                      </div>
+
+                                      <div class="column test">
+                                          <div class="content">
+                                            <h4>Product Delivery</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rerum laboriosam quis, 
+                                              repudiandae culpa eveniet eaque sit eum amet labore impedit ab. Harum maxime hic nobis, 
+                                              tempore architecto totam. Quidem cumque, architecto tempore consequatur itaque eos.
+                                              Autem alias hic, veniam facilis, consectetur blanditiis laborum, velit illo molestiae 
+                                              consequatur animi possimus.
+                                            </p>
+                                          </div>
+                                      </div>
+                          </div>                
+              </div>
+        </div>
+
+        <div id="footer" class="row">
+            <footer><p>Konkan Products Pvt. Ltd. @ All Rights Reserved</p></footer>
+        </div>
+    </div>
+    <script>
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+      
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
+      
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+      
+      
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+      </script>
+    
+</body>
+</html>
