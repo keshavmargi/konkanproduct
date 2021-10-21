@@ -1,6 +1,6 @@
 
 class Product {
-
+  
 
   constructor(title, image, desc, price) {
     this.title = title;
@@ -64,6 +64,33 @@ class ShoppingCart extends Component {
     this.orderProducts = () => {
       console.log('Ordering...');
       console.log(this.items);
+      let text = "<ul>";
+      for ( let a = 0; a < this.items.length;a++){
+        text += "<li>" + `${this.items[a].title} : ${this.items[a].price}` + "</li>";
+        /* console.log(`${this.items[a].title} : ${this.items[a].price}`); */
+       /*  var prodarray = [];
+        prodarray.push(`${this.items[a].title} : ${this.items[a].price}`);
+        console.log(prodarray); */
+        
+        
+      /* for ( var b = 0; b < prodarray.length; b++ ){ */
+        /* var imp = [];
+        imp.push(`${prodarray[b]}`); */
+        /* console.log(`${prodarray[b]}`); */
+        
+        /* var text = "";
+        text += prodarray[b] + "<br>";
+        document.getElementById('temp').innerHTML = text; */
+      /* } */
+      
+        /* const wowid = document.getElementById('temp');
+        wowid.innerHTML = `${this.items[a].title} : ${this.items[a].price}` */
+      }
+      text += "</ul>";
+      document.getElementById('temp').innerHTML = text;
+      console.log(text);
+      /* const tempid = document.getElementById('temp');
+      tempid.innerHTML = this.items[0].title ; this.items[0].price; */
     };
     this.render();
   }
@@ -131,61 +158,61 @@ class ProductList extends Component {
     this.#products = [
       new Product(
         'Mango Hapus',
-        'file:///D:/Web%20Works/Ecommerce%20Website/mango1.jpg',
+        'mango1.jpg',
         'Per Dozon',
         10.00
       ),
       new Product(
         'Konkan Cashew',
-        'file:///D:/Web%20Works/Ecommerce%20Website/Cashew2.jpg',
+        'Cashew2.jpg',
         'Rate Per Kg',
         15.00
       ),
       new Product(
         'Kokam',
-        'file:///D:/Web%20Works/Ecommerce%20Website/Kokum3.jpg',
+        'Kokum3.jpg',
         'Rate Per Kg',
         4.00
       ),
       new Product(
         'Coconuts',
-        'file:///D:/Web%20Works/Ecommerce%20Website/Coconuts.png',
+        'Coconuts.png',
         'Rate Per Pics',
         1.5
       ),
       new Product(
         'Amla Juice',
-        'file:///D:/Web%20Works/Ecommerce%20Website/Amla.jpg',
+        'Amla.jpg',
         'Rate Per Liter',
         4.8
       ),
       new Product(
         'Mango Pulp',
-        'file:///D:/Web%20Works/Ecommerce%20Website/mango2.png',
+        'mango2.png',
         'Rate Per Liter',
         19.99
       ),
       new Product(
         'Jambhul Ras',
-        'file:///D:/Web%20Works/Ecommerce%20Website/Jambhul.jpg',
+        'Jambhul.jpg',
         'Rate Per Liter',
         2.4
       ),
       new Product(
         'Phanas Poli',
-        'file:///D:/Web%20Works/Ecommerce%20Website/Phanaspoli.jpg',
+        'Phanaspoli.jpg',
         'Rate Per Packet',
         2.2
       ),
       new Product(
         'Amba Vadi',
-        'file:///D:/Web%20Works/Ecommerce%20Website/Ambavadi.jpg',
+        'Ambavadi.jpg',
         'Rate Per Packet',
         2.6
       ),
       new Product(
         'Shengadana Laddoo',
-        'file:///D:/Web%20Works/Ecommerce%20Website/Shengdana%20Laddoo.jpg',
+        'Shengdana Laddoo.jpg',
         'Rate Per Packet',
         1.1
       )
@@ -216,6 +243,7 @@ class Shop {
 
   render() {
     this.cart = new ShoppingCart('app1');
+    /* this.cart = new ShoppingCart('app2'); */
     new ProductList('app');
   }
 }
